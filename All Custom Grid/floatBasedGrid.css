@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --small-device-breakpoint: 540px;
+  --medium-device-breakpoint: 720px;
+  --large-device-breakpoint: 960px;
+  --extra-large-device-breakpoint: 1140px;
+  --super-large-device-breakpoint: 1140px;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+/* .container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 auto;
+    max-width: var(--extra-large-device-breakpoint);
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+    max-width: var(--large-device-breakpoint);
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+    max-width: var(--medium-device-breakpoint);
+  }
+}
+
+@media (min-width: 576px){
+  max-width: var(--small-device-breakpoint);
+} */
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+/*   padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem); */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+  
+    .col {
+    max-width: calc((100% - 15px) / 3);
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+  
+    .col {
+    max-width: calc((100% - 30px) / 6);
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+  
+  .col {
+    max-width: calc((100% - 40px) / 8);
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+  .col {
+    max-width: calc((100% - 50px) / 10);
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+  
+}
+
+.row {
+  width: 100%;
+  padding: 1rem;
+  background: red;
+}
+
+.col {
+  width: calc((100% - 10px));
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: blue;
+  height: 200px;
+  float: left;
+}
